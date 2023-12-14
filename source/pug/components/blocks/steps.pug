@@ -1,0 +1,40 @@
+-
+  const stepsData = [
+    {
+      number: "1",
+      name: "Sign-up and get your <span class='color-cyan'>free NFT glasses</span>",
+    },
+    {
+      number: "2",
+      name: "Watch the feed and get the boxes <span class='color-cyan'>with LEE tokens</span>",
+    },
+    {
+      number: "3",
+      name: "Buy your NFT glasses and <span class='color-cyan'>get LEE tokens</span> directly when watching the feed",
+      text: "The higher the rarity of your NFT glasses, the more points you get when leveling them up – the more tokens you can earn",
+      img: "pic"
+    },
+    {
+      number: "4",
+      name: "Upgrade your <span class='color-cyan'>NFT glasses</span>",
+    },
+    {
+      number: "5",
+      name: "<span class='color-cyan'>Buy additional</span> NFT glasses to increase the amount of Attention and rewarded time of watching the feed",
+      text: "1 Attention = <b>10 minutes</b> of rewarded feed viewing",
+    },
+  ]
+
+mixin steps(data)
+  section.steps
+    .steps__img
+      +picture('content', 'image', 'jpg', 723, 890, 'phone with app')
+    each item in data
+      .steps__item(class=`steps__item--${item.number}`)
+        .steps__number!=item.number
+        .steps__name!=item.name
+        if item.text
+          p.steps__text!=item.text
+            if item.img
+              span.steps__decor
+                +picture('content', item.img, 'png', 103, 97, 'decor image')

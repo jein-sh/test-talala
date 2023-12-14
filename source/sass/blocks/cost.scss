@@ -1,0 +1,37 @@
+.cost {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  &__img {
+    width: 30px;
+    height: 30px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__name {
+    color: $color-alice-blue;
+    font-size: 8px;
+    text-transform: uppercase;
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    color: $color-default-white;
+    font-size: 16px;
+    font-weight: 700;
+
+    svg {
+      width: 7px;
+      height: 5px;
+      color: $color-cyan;
+      transform: rotate(180deg);
+    }
+  }
+}

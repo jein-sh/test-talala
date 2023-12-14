@@ -1,0 +1,47 @@
+-
+  const links = [
+    {
+      href: "#",
+      name: "discort"
+    },
+    {
+      href: "#",
+      name: "telegram"
+    },
+    {
+      href: "#",
+      name: "twitter"
+    },
+    {
+      href: "#",
+      name: "facebook"
+    },
+    {
+      href: "#",
+      name: "instagram"
+    },
+    {
+      href: "#",
+      name: "icon"
+    },
+
+  ]
+
+mixin intro()
+  .intro
+    .intro__bg
+      +picture('content', 'promo', 'jpg', 1512, 907)
+    .container
+      .intro__info
+        .intro__title
+          h1 GameFi short video #[span.color-cyan platform]
+          span.intro__subtitle Watch. Play. Earn
+
+        button(type="button").intro__registration
+          +icon('google-play', 64, 64)
+          .intro__text Pre-registration in Google Play
+      ul.intro__links
+        each item in links
+          li
+            a.intro__link(href=item.href, aria-label=`link to ${item.name}`)
+              +icon(item.name, 64, 64)

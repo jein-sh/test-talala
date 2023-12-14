@@ -1,0 +1,29 @@
+.presale {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 207px;
+  padding: 52px 118px;
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+    }
+  }
+
+  &__text {
+    font-size: 26px;
+    line-height: 38px;
+    font-weight: 700;
+  }
+}

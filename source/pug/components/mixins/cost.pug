@@ -1,0 +1,21 @@
+-
+  cheel = {
+    img: 'cheel',
+    name: 'cheel',
+    price: '$8,00'
+  }
+
+  lee = {
+    img: 'lee',
+    name: 'lee',
+    price: '$8,00'
+  }
+
+mixin cost(data)
+  .cost
+    .cost__img
+      +picture('content', data.img, 30, 30, data.name)
+    .cost__info
+      .cost__name!=data.name
+      .cost__price!=data.price
+        +icon('arrow', 7, 5)

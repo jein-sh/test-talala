@@ -1,0 +1,43 @@
+.mission {
+  display: flex;
+  flex-direction: column;
+  padding: 0 115px 99px;
+
+  &__title {
+    margin: 0 0 40px;
+    font-size: 72px;
+    font-weight: 900;
+  }
+
+  &__subtitle {
+    margin: 0 0 40px;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 38px;
+  }
+
+  &__info {
+    display: flex;
+    gap: 24px;
+    font-size: 26px;
+    line-height: 38px;
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+
+    &--sm {
+      font-size: 18px;
+      line-height: 33px;
+
+      &:not(:last-child) {
+        margin-bottom: 26px;
+      }
+    }
+  }
+
+  &__text {
+    flex: 1;
+    margin: 0;
+  }
+}

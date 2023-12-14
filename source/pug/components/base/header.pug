@@ -1,0 +1,43 @@
+mixin header(headerMods, currentUrl)
+  -
+    const headerLinks = [
+      {
+        href: "#",
+        text: "About us"
+      },
+      {
+        href: "#",
+        text: "Roadmap"
+      },
+      {
+        href: "#",
+        text: "Documents"
+      },
+      {
+        href: "#",
+        text: "F.A.Q."
+      },
+      {
+        href: "#",
+        text: "Buy NFT glasses",
+        mod: 'cyan'
+      },
+    ]
+
+  header.header
+    .container
+      a.header__logo(href="index.html", aria-label="Переход на главную")
+        +picture('content', 'logo', 92, 58, 'logo')
+      nav.header__nav
+        each link in headerLinks
+          - const classMod = link.mod ? `header__link--${link.mod}` : null
+          li.header__item
+            a.header__link(href=link.href class=classMod)= link.text
+      .header__details
+        +cost(cheel)
+        +cost(lee)
+        .header__audit
+          +img('svg', 'certik','svg', 177, 58)
+        button(type="button").header__lang
+          span EN
+          +icon('arrow', 10, 6)
