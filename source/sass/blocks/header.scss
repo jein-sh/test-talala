@@ -32,10 +32,15 @@
   &__link {
     color: $color-shuttle-grey;
     font-size: 16px;
+    transition: color $trans-default;
 
     &--cyan {
       font-weight: 700;
       color: $color-cyan;
+    }
+
+    @include hover-focus {
+      color: $color-default-white;
     }
   }
 
@@ -65,6 +70,7 @@
     color: $color-shuttle-grey;
     font-size: 16px;
     text-transform: uppercase;
+    cursor: pointer;
 
     svg {
       width: 10px;
@@ -72,7 +78,10 @@
       margin-left: 4px;
     }
 
+    transition: color $trans-default;
+
+    @include hover-focus {
+      color: $color-default-white;
+    }
   }
-
-
 }
